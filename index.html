@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cyber Playground</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    background: #080d13;
+    color: #00ff99;
+    font-family: monospace;
+    text-align: center;
+    padding: 15px;
+}
+
+.box {
+    background: #121d27;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 12px;
+}
+
+textarea {
+    width: 95%;
+    height: 150px;
+    background: black;
+    color: #00ff99;
+    padding: 8px;
+}
+
+button {
+    background: #00ff99;
+    padding: 12px 25px;
+    border: none;
+    font-weight: bold;
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    background: white;
+}
+</style>
+</head>
+
+<body>
+
+<h1>⚡ CYBER PLAYGROUND</h1>
+<p>Learn • Code • Create</p>
+
+<div class="box">
+<h2>HTML Playground</h2>
+
+<textarea id="code"><h1>Hello Vinayak!</h1>
+<p>Welcome to my playground.</p></textarea>
+
+<br><br>
+
+<button onclick="runCode()">RUN CODE</button>
+
+<h2>OUTPUT</h2>
+<iframe id="output" sandbox="allow-scripts"></iframe>
+</div>
+
+<script>
+function runCode() {
+    let code = document.getElementById("code").value;
+    document.getElementById("output").srcdoc = code;
+}
+</script>
+
+</body>
+</html>
